@@ -1,0 +1,11 @@
+rembg
+onnxruntime
+easyocr
+paddleocr
+paddlepaddle
+numpy
+pillow
+scikit-image
+rembg
+opencv-python
+flask
