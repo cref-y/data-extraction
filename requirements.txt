@@ -9,3 +9,4 @@ scikit-image
 rembg
 opencv-python
 flask
+gunicorn
