@@ -1,5 +1,6 @@
 from flask import Flask, request, jsonify
 from data_extraction import remove_background,image_preprocess,extract_ocr_results,extract_id_info
+import os
 
 app = Flask(__name__)
 
@@ -21,4 +22,5 @@ def process_id_card():
     
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
