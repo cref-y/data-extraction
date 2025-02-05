@@ -10,3 +10,4 @@ rembg
 opencv-python
 flask
 gunicorn
+opencv-python-headless
