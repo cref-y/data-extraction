@@ -1,8 +1,17 @@
 from flask import Flask, request, jsonify
 from data_extraction import remove_background,image_preprocess,extract_ocr_results,extract_id_info
 import os
+import logging
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 app = Flask(__name__)
+
+@app.route("/", methods=["GET"])
+def health_check():
+    logger.info("Health check endpoint called")
+    return jsonify({"status": "healthy"}), 200
 
 @app.route("/extract_data", methods=["POST"])
 def process_id_card():
@@ -22,5 +31,6 @@ def process_id_card():
     
 
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 5000))
+    port = int(os.environ.get("PORT", 10000))
+    logger.info(f"Starting app on port {port}")
     app.run(host="0.0.0.0", port=port)
