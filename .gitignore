@@ -1,2 +1,7 @@
 *.env
 /data_extraction
+__pycache__/
+*.pyc
+.env
+venv/
+.DS_Store
