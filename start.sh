@@ -1,2 +1,10 @@
 #!/bin/bash
-gunicorn --bind 0.0.0.0:$PORT app:app --timeout 120
+export PORT=${PORT:-8080}
+echo "Starting server on port $PORT"
+gunicorn app:app \
+    --bind 0.0.0.0:$PORT \
+    --workers 4 \
+    --timeout 120 \
+    --log-level info \
+    --access-logfile - \
+    --error-logfile -
