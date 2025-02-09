@@ -2,6 +2,8 @@ from flask import Flask, request, jsonify
 from data_extraction import remove_background,image_preprocess,extract_ocr_results,extract_id_info
 import os
 import logging
+from config import PORT
+
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
