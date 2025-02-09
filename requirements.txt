@@ -10,4 +10,4 @@ opencv-python-headless
 waitress
 Flask
 Werkzeug
-gunicorn
+gunicorn>=20.1.0
