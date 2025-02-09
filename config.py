@@ -1,4 +1,5 @@
 import os
+import app
 
 class Config:
     PORT = 8080
