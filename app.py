@@ -34,5 +34,5 @@ def process_id_card():
         logger.error(f"Error processing request: {str(e)}")
         return jsonify({"error": str(e)}), 500
 
-# if __name__ == "__main__":
-#     app.run(host="0.0.0.0", port=port)
+if __name__ == "__main__":
+    app.run()
