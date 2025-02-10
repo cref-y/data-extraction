@@ -1,0 +1,10 @@
+__pycache__/
+.git/
+.gitignore
+*.pyc
+*.pyo
+*.pyd
+node_modules/
+.venv/
+venv/
+data_extraction
